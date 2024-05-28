@@ -1,5 +1,6 @@
 import { typing } from "@/utility/typing";
 import { useEffect } from "react";
+import { myInfo } from "@/utility/data";
 
 const SideBar = () => {
   useEffect(() => {
@@ -31,18 +32,13 @@ const SideBar = () => {
           </div>
           <div className="trm-divider trm-mb-20 trm-mt-20" />
           <div className="trm-social">
-            <a href="#." target="_blank">
-              <i className="fab fa-linkedin-in" />
-            </a>
-            <a href="#." target="_blank">
-              <i className="fab fa-github" />
-            </a>
-            <a href="#." target="_blank">
-              <i className="fab fa-telegram" />
-            </a>
-            <a href="#." target="_blank">
-              <i className="fab fa-discord" />
-            </a>
+            {
+              myInfo.contact.map((ele, idx) => 
+                <a href={ele.link} target="_blank" key={idx}>
+                  <i className={`fab ${ele.icon}`} />
+                </a>
+              )
+            }
           </div>
 
           <div className="trm-divider trm-mb-20 trm-mt-20" />

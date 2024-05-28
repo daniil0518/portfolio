@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="trm-label">
         Developed by:{" "}
         <a
-          href="https://themeforest.net/user/bslthemes"
+          href="https://github.com/daniil0518"
           target="_blank"
         >
           Daniil

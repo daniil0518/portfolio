@@ -2,15 +2,7 @@
 import { context } from "@/context/context";
 import DefaultLayOut from "@/layout/DefaultLayOut";
 import { useContext, useEffect } from "react";
-
-const portfolioItems = [
-  { id: 1, img: "/img/portfolio/1.jpg", title: "Branded cup" },
-  { id: 2, img: "/img/portfolio/2.jpg", title: "Stylish business card" },
-  { id: 3, img: "/img/portfolio/3.gif", title: "Mobile application" },
-  { id: 4, img: "/img/portfolio/4.jpg", title: "T-shirt print" },
-  { id: 5, img: "/img/portfolio/5.jpg", title: "T-shirt print" },
-  { id: 6, img: "/img/portfolio/6.jpg", title: "Branded Package" },
-];
+import { myInfo } from "@/utility/data";
 
 const Index = () => {
   const { banner_image_function, page_info_function } = useContext(context);
@@ -21,9 +13,8 @@ const Index = () => {
   return (
     <DefaultLayOut>
       <div className="row">
-        {portfolioItems.map((item) => (
+        {myInfo.portfolio.map((item) => (
           <div className="col-lg-6" key={item.id}>
-            {/* portfolio item */}
             <a
               data-fancybox="portfolio"
               href={item.img}
@@ -40,15 +31,8 @@ const Index = () => {
                 <div className="trm-zoom-icon">
                   <i className="fas fa-search-plus" />
                 </div>
-                <div className="trm-zoom-icon">
-                  <i className="fas fa-search-plus" />
-                </div>
-                <div className="trm-zoom-icon">
-                  <i className="fas fa-search-plus" />
-                </div>
               </div>
             </a>
-            {/* portfolio item end */}
           </div>
         ))}
       </div>

@@ -36,6 +36,9 @@ const Portfolio = () => {
             <div className="trm-item-description">
               <h6>{item.title}</h6>
               <div className="trm-zoom-icon">
+                <i className="fas fa-desktop" />
+              </div>
+              <div className="trm-zoom-icon">
                 <i className="fas fa-search-plus" />
               </div>
             </div>

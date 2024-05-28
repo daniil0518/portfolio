@@ -1,79 +1,97 @@
 export const myInfo = {
-    "services":[
+    "contact": [
         {
-            "id": "1",
+            "icon": "fa-linkedin-in",
+            "link": ""
+        },
+        {
+            "icon": "fa-github",
+            "link": "https://github.com/daniil0518"
+        },
+        {
+            "icon": "fa-telegram",
+            "link": ""
+        },
+        {
+            "icon": "fa-discord",
+            "link": ""
+        },
+        {
+            "icon": "fa-slack",
+            "link": ""
+        }
+    ],
+    "services": [
+        {
             "title": "Architecture",
             "icon": "/img/icons/icon-1.svg",
             "dicon": "/img/icons/icon-1w.svg",
             "desc": "Dolor sit amet, consectetur adipisicing elit. Delectus esse commodi."
         },
         {
-            "id": "1",
             "title": "UI/UX Design",
             "icon": "/img/icons/icon-2.svg",
             "dicon": "/img/icons/icon-2w.svg",
             "desc": "Dolor sit amet, consectetur adipisicing elit. Delectus esse commodi."
         },
         {
-            "id": "1",
             "title": "Interior Design",
             "icon": "/img/icons/icon-3.svg",
             "dicon": "/img/icons/icon-3w.svg",
             "desc": "Dolor sit amet, consectetur adipisicing elit. Delectus esse commodi."
         },
         {
-            "id": "1",
             "title": "Interior Design",
             "icon": "/img/icons/icon-4.svg",
             "dicon": "/img/icons/icon-4w.svg",
             "desc": "Dolor sit amet, consectetur adipisicing elit. Delectus esse commodi."
         }
     ],
-    "price":[
+    "price": [
         {
-            "title":"Hourly Payment",
+            "title": "Hourly Payment",
             "mount": "30",
-            "unit":"hrs",
+            "unit": "hrs",
             "popular": true,
             "services": [
                 {
-                    "title":"AMET LOREM",
+                    "title": "AMET LOREM",
                     "available": true
                 },
                 {
-                    "title":"AMET LOREM",
+                    "title": "AMET LOREM",
                     "available": true
                 },
                 {
-                    "title":"AMET LOREM",
+                    "title": "AMET LOREM",
                     "available": false
                 },
                 {
-                    "title":"AMET LOREM",
+                    "title": "AMET LOREM",
                     "available": false
                 }
             ]
         },
         {
-            "title":"Full Time",
+            "title": "Full Time",
             "mount": "5000",
-            "unit":"months",
+            "unit": "months",
             "popular": false,
             "services": [
                 {
-                    "title":"AMET LOREM",
+                    "title": "AMET LOREM",
                     "available": true
                 },
                 {
-                    "title":"AMET LOREM",
+                    "title": "AMET LOREM",
                     "available": true
                 },
                 {
-                    "title":"AMET LOREM",
+                    "title": "AMET LOREM",
                     "available": true
                 },
                 {
-                    "title":"AMET LOREM",
+                    "title": "AMET LOREM",
                     "available": true
                 }
             ]
@@ -146,5 +164,13 @@ export const myInfo = {
                 "desc": "Test",
             }
         ]
-    }
+    },
+    "portfolio": [
+        { id: 1, img: "/img/portfolio/1.jpg", title: "Fitness | React" },
+        { id: 2, img: "/img/portfolio/2.jpg", title: "Food | React" },
+        { id: 3, img: "/img/portfolio/3.jpg", title: "Ecommerce | React" },
+        { id: 4, img: "/img/portfolio/4.jpg", title: "Clothes | React" },
+        { id: 5, img: "/img/portfolio/5.jpg", title: "Ecommerce | Django" },
+        { id: 6, img: "/img/portfolio/6.jpg", title: "Real estate | Django" },
+    ]
 }

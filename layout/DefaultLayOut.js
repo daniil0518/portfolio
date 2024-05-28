@@ -24,7 +24,6 @@ const DefaultLayOut = ({ children, noSidebar, onePage }) => {
 
   return (
     <Fragment>
-      <VideoPopup />
       <ContactPopup />
       <div data-scroll-section="" id="content" className="trm-scroll-section">
         <TopBar onePage={onePage} />
