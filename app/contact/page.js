@@ -37,10 +37,8 @@ const Index = () => {
       formData,
       NEXT_PUBLIC_EMAILJS_USER_ID
     ).then((response) => {
-      console.log('SUCCESS!', response.status, response.text);
       alert('Message sent successfully!');
     }).catch((err) => {
-      console.error('FAILED...', err);
       alert('Failed to send message.');
     });
   };
