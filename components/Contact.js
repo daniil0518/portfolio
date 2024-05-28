@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment, useRef, useState } from "react";
 import emailjs from 'emailjs-com';
 
 const Contact = () => {
@@ -24,6 +24,7 @@ const ContactInfo = () => {
   );
 };
 const ContactForm = () => {
+  const currentForm = useRef();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -41,6 +42,8 @@ const ContactForm = () => {
     e.preventDefault();
     
     const { NEXT_PUBLIC_EMAILJS_USER_ID, NEXT_PUBLIC_EMAILJS_SERVICE_ID, NEXT_PUBLIC_EMAILJS_TEMPLATE_ID } = process.env;
+
+    console.log(currentForm.current)
     
     emailjs.sendForm(
       NEXT_PUBLIC_EMAILJS_SERVICE_ID,
@@ -65,7 +68,7 @@ const ContactForm = () => {
       </div>
       <div className="col-lg-12">
         <div className="trm-contact-card">
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} ref={currentForm}>
             <input type="text" name="name" placeholder="Name" onChange={handleChange} />
             <input type="email" name="email" placeholder="Email" onChange={handleChange} />
             <textarea rows={6}  name="message" placeholder="Message" defaultValue={""} onChange={handleChange} />

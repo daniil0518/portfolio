@@ -2,8 +2,9 @@
 import { context } from "@/context/context";
 import DefaultLayOut from "@/layout/DefaultLayOut";
 import emailjs from 'emailjs-com';
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 const Index = () => {
+  const currentForm = useRef();
   const { banner_image_function, page_info_function } = useContext(context);
   useEffect(() => {
     page_info_function(
@@ -28,7 +29,7 @@ const Index = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     const { NEXT_PUBLIC_EMAILJS_USER_ID, NEXT_PUBLIC_EMAILJS_SERVICE_ID, NEXT_PUBLIC_EMAILJS_TEMPLATE_ID } = process.env;
     
     emailjs.sendForm(
@@ -54,7 +55,7 @@ const Index = () => {
         </div>
         <div className="col-lg-12">
           <div className="trm-contact-card">
-            <form id="form2" onSubmit={handleSubmit}>
+            <form id="form2" onSubmit={handleSubmit} ref={currentForm}>
               <input name="name" type="text" placeholder="Name" onChange={handleChange} />
               <input name="email" type="email" placeholder="Email" onChange={handleChange} />
               <textarea
