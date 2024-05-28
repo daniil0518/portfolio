@@ -1,7 +1,7 @@
 "use client";
 import { context } from "@/context/context";
 import DefaultLayOut from "@/layout/DefaultLayOut";
-import Link from "next/link";
+import emailjs from 'emailjs-com';
 import { useContext, useEffect, useState } from "react";
 const Index = () => {
   const { banner_image_function, page_info_function } = useContext(context);
