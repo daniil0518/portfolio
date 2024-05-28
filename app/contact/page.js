@@ -35,8 +35,10 @@ const Index = () => {
     emailjs.sendForm(
       NEXT_PUBLIC_EMAILJS_SERVICE_ID,
       NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-      formData,
-      NEXT_PUBLIC_EMAILJS_USER_ID
+      currentForm.current,
+      {
+        publicKey: NEXT_PUBLIC_EMAILJS_USER_ID,
+      }
     ).then((response) => {
       alert('Message sent successfully!');
     }).catch((err) => {
@@ -74,18 +76,6 @@ const Index = () => {
                 </div>
               </div>
             </form>
-            {/* <div className="trm-success-banner">
-              <img src="img/success.png" alt="success" className="trm-mb-15" />
-              <h4 className="trm-mb-15">Success</h4>
-              <div className="trm-text trm-mb-20">
-                Your message has been sent successfully
-              </div>
-              <Link legacyBehavior href="/">
-                <a className="trm-btn">
-                  <i className="fas fa-arrow-left" /> Back to homepage
-                </a>
-              </Link>
-            </div> */}
           </div>
         </div>
       </div>

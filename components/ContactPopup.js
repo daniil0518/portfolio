@@ -9,6 +9,9 @@ const ContactPopup = () => {
     message: '',
   });
 
+  const [serverSuccess, setServerSuccess] = useState("");
+  const [serverError, setServerError] = useState("");
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -27,7 +30,9 @@ const ContactPopup = () => {
       NEXT_PUBLIC_EMAILJS_SERVICE_ID,
       NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
       currentForm.current,
-      NEXT_PUBLIC_EMAILJS_USER_ID
+      {
+        publicKey: NEXT_PUBLIC_EMAILJS_USER_ID,
+      }
     ).then((response) => {
       console.log('SUCCESS!', response.status, response.text);
       alert('Message sent successfully!');
@@ -60,16 +65,6 @@ const ContactPopup = () => {
             </form>
             <div className="trm-text-sm trm-mt-20">
               * I promise the confidentiality of your personal information
-            </div>
-            <div className="trm-success-banner">
-              <img src="img/success.png" alt="success" className="trm-mb-15" />
-              <h4 className="trm-mb-15">Success</h4>
-              <div className="trm-text trm-mb-20">
-                Your message has been sent successfully
-              </div>
-              <a href="#." className="trm-btn" data-fancybox-close>
-                Ok
-              </a>
             </div>
           </div>
         </div>

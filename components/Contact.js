@@ -48,8 +48,10 @@ const ContactForm = () => {
     emailjs.sendForm(
       NEXT_PUBLIC_EMAILJS_SERVICE_ID,
       NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-      formData,
-      NEXT_PUBLIC_EMAILJS_USER_ID
+      currentForm.current,
+      {
+        publicKey: NEXT_PUBLIC_EMAILJS_USER_ID,
+      }
     ).then((response) => {
       console.log('SUCCESS!', response.status, response.text);
       alert('Message sent successfully!');
