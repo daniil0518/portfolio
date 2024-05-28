@@ -22,6 +22,37 @@ const ContactInfo = () => {
   );
 };
 const ContactForm = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    const { NEXT_PUBLIC_EMAILJS_USER_ID, NEXT_PUBLIC_EMAILJS_SERVICE_ID, NEXT_PUBLIC_EMAILJS_TEMPLATE_ID } = process.env;
+    
+    emailjs.send(
+      NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+      NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+      formData,
+      NEXT_PUBLIC_EMAILJS_USER_ID
+    ).then((response) => {
+      console.log('SUCCESS!', response.status, response.text);
+      alert('Message sent successfully!');
+    }).catch((err) => {
+      console.error('FAILED...', err);
+      alert('Failed to send message.');
+    });
+  };
   return (
     <div className="row">
       <div className="col-lg-12">
@@ -32,10 +63,10 @@ const ContactForm = () => {
       </div>
       <div className="col-lg-12">
         <div className="trm-contact-card">
-          <form>
-            <input type="text" placeholder="Name" />
-            <input type="email" placeholder="Email" />
-            <textarea rows={6} placeholder="Message" defaultValue={""} />
+          <form onSubmit={handleSubmit}>
+            <input type="text" name="name" placeholder="Name" onChange={handleChange} />
+            <input type="email" name="email" placeholder="Email" onChange={handleChange} />
+            <textarea rows={6}  name="message" placeholder="Message" defaultValue={""} onChange={handleChange} />
             <div className="trm-form-bottom">
               <button type="submit" className="trm-btn">
                 Send <i className="fas fa-arrow-right" />

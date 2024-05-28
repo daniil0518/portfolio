@@ -11,6 +11,7 @@
   "dependencies": {
     "@fancyapps/ui": "^5.0.33",
     "classnames": "^2.5.1",
+    "emailjs-com": "^3.2.0",
     "locomotive-scroll": "^4.1.4",
     "next": "14.1.0",
     "react": "^18",

@@ -12,6 +12,39 @@ const Index = () => {
       "contact"
     );
   }, []);
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    const { NEXT_PUBLIC_EMAILJS_USER_ID, NEXT_PUBLIC_EMAILJS_SERVICE_ID, NEXT_PUBLIC_EMAILJS_TEMPLATE_ID } = process.env;
+    
+    emailjs.send(
+      NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+      NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+      formData,
+      NEXT_PUBLIC_EMAILJS_USER_ID
+    ).then((response) => {
+      console.log('SUCCESS!', response.status, response.text);
+      alert('Message sent successfully!');
+    }).catch((err) => {
+      console.error('FAILED...', err);
+      alert('Failed to send message.');
+    });
+  };
+
   return (
     <DefaultLayOut>
       <div className="row">
@@ -23,14 +56,15 @@ const Index = () => {
         </div>
         <div className="col-lg-12">
           <div className="trm-contact-card">
-            <form id="form2">
-              <input name="name" type="text" placeholder="Name" />
-              <input name="email" type="email" placeholder="Email" />
+            <form id="form2" onSubmit={handleSubmit}>
+              <input name="name" type="text" placeholder="Name" onChange={handleChange} />
+              <input name="email" type="email" placeholder="Email" onChange={handleChange} />
               <textarea
-                name="text"
+                name="message"
                 rows={6}
                 placeholder="Message"
                 defaultValue={""}
+                onChange={handleChange}
               />
               <div className="trm-form-bottom">
                 <button type="submit" className="trm-btn">
@@ -41,7 +75,7 @@ const Index = () => {
                 </div>
               </div>
             </form>
-            <div className="trm-success-banner">
+            {/* <div className="trm-success-banner">
               <img src="img/success.png" alt="success" className="trm-mb-15" />
               <h4 className="trm-mb-15">Success</h4>
               <div className="trm-text trm-mb-20">
@@ -52,7 +86,7 @@ const Index = () => {
                   <i className="fas fa-arrow-left" /> Back to homepage
                 </a>
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

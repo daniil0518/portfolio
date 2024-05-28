@@ -1,5 +1,39 @@
 import { Fragment } from "react";
+import emailjs from 'emailjs-com';
+
 const ContactPopup = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    const { NEXT_PUBLIC_EMAILJS_USER_ID, NEXT_PUBLIC_EMAILJS_SERVICE_ID, NEXT_PUBLIC_EMAILJS_TEMPLATE_ID } = process.env;
+    
+    emailjs.send(
+      NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+      NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+      formData,
+      NEXT_PUBLIC_EMAILJS_USER_ID
+    ).then((response) => {
+      console.log('SUCCESS!', response.status, response.text);
+      alert('Message sent successfully!');
+    }).catch((err) => {
+      console.error('FAILED...', err);
+      alert('Failed to send message.');
+    });
+  };
+
   return (
     <Fragment>
       <div id="trm-order" className="trm-order">
@@ -7,14 +41,15 @@ const ContactPopup = () => {
           <img src="img/popup.jpg" alt="photo" />
           <div className="trm-popup-form-frame">
             <h5 className="trm-mb-40">Write me a message</h5>
-            <form id="form1">
-              <input name="name" type="text" placeholder="Name" />
-              <input name="email" type="email" placeholder="Email" />
+            <form id="form1" onSubmit={handleSubmit}>
+              <input name="name" type="text" placeholder="Name" onChange={handleChange} />
+              <input name="email" type="email" placeholder="Email" onChange={handleChange} />
               <textarea
-                name="text"
+                name="message"
                 rows={6}
                 placeholder="Message"
                 defaultValue={""}
+                onChange={handleChange}
               />
               <button type="submit" className="trm-btn">
                 Send <i className="fas fa-arrow-right" />

@@ -2,7 +2,7 @@ export const myInfo = {
     "contact": [
         {
             "icon": "fa-linkedin-in",
-            "link": ""
+            "link": "https://www.linkedin.com/in/daniil-svechenovskyi-64743830a"
         },
         {
             "icon": "fa-github",
@@ -10,16 +10,12 @@ export const myInfo = {
         },
         {
             "icon": "fa-telegram",
-            "link": ""
+            "link": "https://t.me/Seahorse_919"
         },
-        {
-            "icon": "fa-discord",
-            "link": ""
-        },
-        {
-            "icon": "fa-slack",
-            "link": ""
-        }
+        // {
+        //     "icon": "fa-discord",
+        //     "link": ""
+        // },
     ],
     "services": [
         {
