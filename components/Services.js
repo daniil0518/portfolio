@@ -1,13 +1,7 @@
-import { DataContext } from "@/context/datacontext";
-import { useContext, useEffect, useState } from "react";
+import { myInfo } from "@/utility/data";
 
 const Services = () => {
-  const { data } = useContext(DataContext)
-  const [services, setServices] = useState([])
-  useEffect(() => {
-    if("services" in data)
-      setServices(data["services"])
-  }, [data])
+  
   return (
     <div className="row">
       <div className="col-lg-12">
@@ -16,7 +10,7 @@ const Services = () => {
         </h5>
       </div>
       {
-        services.map((ele, idx) =>
+        myInfo.services.map((ele, idx) =>
           <div key={idx} className="col-lg-6">
             <div
               className="trm-service-icon-box trm-scroll-animation"

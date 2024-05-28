@@ -1,14 +1,8 @@
-import { DataContext } from "@/context/datacontext";
-import { useContext, useEffect, useState } from "react";
 import classNames from "classnames"
+import { myInfo } from "@/utility/data";
 
 const Price = () => {
-  const {data} = useContext(DataContext)
-  const [price, setPrice] = useState([])
-  useEffect(() => {
-    if("price" in data)
-      setPrice(data["price"])
-  }, [data])
+  
   return (
     <div className="row">
       <div className="col-lg-12">
@@ -18,7 +12,7 @@ const Price = () => {
         </h5>
       </div>
       {
-        price.map((ele, idx) => 
+        myInfo.price.map((ele, idx) => 
           <div className="col-lg-6" key={idx}>
             {/* price table */}
             <div

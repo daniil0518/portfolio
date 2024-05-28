@@ -1,4 +1,4 @@
-{
+export const myInfo = {
     "services":[
         {
             "id": "1",
@@ -78,5 +78,73 @@
                 }
             ]
         }
-    ]
+    ],
+    "skills": {
+        "language": [
+            {
+                "title": "Ukraine",
+                "mount": 100
+            },
+            {
+                "title": "English",
+                "mount": 70
+            }
+        ],
+        "frontend": [
+            {
+                "title": "HTML",
+                "mount": 100
+            },
+            {
+                "title": "CSS",
+                "mount": 100
+            },
+            {
+                "title": "SCSS",
+                "mount": 100
+            },
+        ]
+    },
+    "history": {
+        "education": [
+            {
+                "title": "Test",
+                "period": "Test",
+                "position": "Test",
+                "desc": "Test",
+            },
+            {
+                "title": "Test",
+                "period": "Test",
+                "position": "Test",
+                "desc": "Test",
+            },
+            {
+                "title": "Test",
+                "period": "Test",
+                "position": "Test",
+                "desc": "Test",
+            }
+        ],
+        "companies": [
+            {
+                "title": "Test",
+                "period": "Test",
+                "position": "Test",
+                "desc": "Test",
+            },
+            {
+                "title": "Test",
+                "period": "Test",
+                "position": "Test",
+                "desc": "Test",
+            },
+            {
+                "title": "Test",
+                "period": "Test",
+                "position": "Test",
+                "desc": "Test",
+            }
+        ]
+    }
 }

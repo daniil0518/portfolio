@@ -8,7 +8,6 @@ import "@css/style-light.css";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import "./globals.css";
 import State from "/context/context";
-import DataContextProvider from "@/context/datacontext";
 
 export const metadata = {
   title: "Trueman",
@@ -18,7 +17,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <DataContextProvider>
         <State>
           <ModeCSS />
           <body>
@@ -36,7 +34,6 @@ export default function RootLayout({ children }) {
             </div>
           </body>
         </State>
-      </DataContextProvider>
     </html>
   );
 }

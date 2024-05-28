@@ -12,8 +12,6 @@ const Index = () => {
   useEffect(() => {
     banner_image_function("/img/banner2.jpg");
     banner_type_function("image");
-
-    
   }, []);
   return (
     <DefaultLayOut>
@@ -21,7 +19,6 @@ const Index = () => {
       <Story />
       <Services />
       <Price />
-      <Publications />
     </DefaultLayOut>
   );
 };
