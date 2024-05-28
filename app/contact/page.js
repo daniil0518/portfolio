@@ -2,7 +2,7 @@
 import { context } from "@/context/context";
 import DefaultLayOut from "@/layout/DefaultLayOut";
 import Link from "next/link";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 const Index = () => {
   const { banner_image_function, page_info_function } = useContext(context);
   useEffect(() => {
