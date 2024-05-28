@@ -36,7 +36,7 @@ const CareerComponent = ({ data }) => {
             </div>
           </div>
         </div>
-        <div className="trm-mb-20">
+        <div className="trm-mb-10">
           {data.position}
         </div>
       </div>
@@ -74,7 +74,7 @@ const Index = () => {
       }
       <div className="row">
         <div className="col-lg-12">
-          <h5 className="trm-mb-40 trm-title-with-divider">
+          <h5 className="trm-mb-20 trm-title-with-divider">
             Employment History <span data-number={3} />
           </h5>
         </div>

@@ -19,28 +19,28 @@ export const myInfo = {
     ],
     "services": [
         {
-            "title": "Architecture",
+            "title": "Web & Mobile APP",
             "icon": "/img/icons/icon-1.svg",
             "dicon": "/img/icons/icon-1w.svg",
-            "desc": "Dolor sit amet, consectetur adipisicing elit. Delectus esse commodi."
+            "desc": ""
         },
         {
             "title": "UI/UX Design",
             "icon": "/img/icons/icon-2.svg",
             "dicon": "/img/icons/icon-2w.svg",
-            "desc": "Dolor sit amet, consectetur adipisicing elit. Delectus esse commodi."
+            "desc": ""
         },
         {
-            "title": "Interior Design",
+            "title": "Front-end Development",
             "icon": "/img/icons/icon-3.svg",
             "dicon": "/img/icons/icon-3w.svg",
-            "desc": "Dolor sit amet, consectetur adipisicing elit. Delectus esse commodi."
+            "desc": ""
         },
         {
-            "title": "Interior Design",
+            "title": "Back-end Development",
             "icon": "/img/icons/icon-4.svg",
             "dicon": "/img/icons/icon-4w.svg",
-            "desc": "Dolor sit amet, consectetur adipisicing elit. Delectus esse commodi."
+            "desc": ""
         }
     ],
     "price": [
@@ -51,43 +51,147 @@ export const myInfo = {
             "popular": true,
             "services": [
                 {
-                    "title": "AMET LOREM",
+                    "title": "Next 3 months Support",
                     "available": true
                 },
                 {
-                    "title": "AMET LOREM",
+                    "title": "On-Demand Support",
                     "available": true
                 },
                 {
-                    "title": "AMET LOREM",
+                    "title": "Real-Time Support",
                     "available": false
                 },
                 {
-                    "title": "AMET LOREM",
+                    "title": "Scheduled Support",
+                    "available": true
+                },
+                {
+                    "title": "Live Chat Support",
+                    "available": true
+                },
+                {
+                    "title": "Remote Support",
+                    "available": true
+                },
+                {
+                    "title": "Ticketing System",
                     "available": false
+                },
+                {
+                    "title": "Knowledge Base",
+                    "available": true
+                },
+                {
+                    "title": "Training and Onboarding",
+                    "available": false
+                },
+                {
+                    "title": "Maintenance and Updates",
+                    "available": false
+                },
+                {
+                    "title": "Proactive Monitoring",
+                    "available": true
+                },
+                {
+                    "title": "Community Support",
+                    "available": true
+                },
+                {
+                    "title": "Dedicated Support",
+                    "available": true
+                },
+                {
+                    "title": "System Audits",
+                    "available": false
+                },
+                {
+                    "title": "Backup and Recovery",
+                    "available": false
+                },
+                {
+                    "title": "Performance Tuning",
+                    "available": false
+                },
+                {
+                    "title": "Bug Fixing",
+                    "available": true
                 }
             ]
         },
         {
             "title": "Full Time",
-            "mount": "5000",
-            "unit": "months",
+            "mount": "1500",
+            "unit": "weeks",
             "popular": false,
             "services": [
                 {
-                    "title": "AMET LOREM",
+                    "title": "24/7 Support",
                     "available": true
                 },
                 {
-                    "title": "AMET LOREM",
+                    "title": "On-Demand Support",
                     "available": true
                 },
                 {
-                    "title": "AMET LOREM",
+                    "title": "Real-Time Support",
                     "available": true
                 },
                 {
-                    "title": "AMET LOREM",
+                    "title": "Scheduled Support",
+                    "available": true
+                },
+                {
+                    "title": "Live Chat Support",
+                    "available": true
+                },
+                {
+                    "title": "Remote Support",
+                    "available": true
+                },
+                {
+                    "title": "Ticketing System",
+                    "available": true
+                },
+                {
+                    "title": "Knowledge Base",
+                    "available": true
+                },
+                {
+                    "title": "Training and Onboarding",
+                    "available": true
+                },
+                {
+                    "title": "Maintenance and Updates",
+                    "available": true
+                },
+                {
+                    "title": "Proactive Monitoring",
+                    "available": true
+                },
+                {
+                    "title": "Community Support",
+                    "available": true
+                },
+                {
+                    "title": "Dedicated Support",
+                    "available": true
+                },
+                {
+                    "title": "System Audits",
+                    "available": true
+                },
+                {
+                    "title": "Backup and Recovery",
+                    "available": true
+                },
+                {
+                    "title": "Performance Tuning",
+                    "available": true
+                },
+                {
+                    "title": "Bug Fixing",
                     "available": true
                 }
             ]
@@ -117,46 +221,240 @@ export const myInfo = {
                 "title": "SCSS",
                 "mount": 100
             },
+            {
+                "title": "Tailwind CSS",
+                "mount": 100
+            },
+            {
+                "title": "Bootstrap",
+                "mount": 100
+            },
+            {
+                "title": "Material UI",
+                "mount": 100
+            },
+            {
+                "title": "JavaScript",
+                "mount": 100
+            },
+            {
+                "title": "TypeScript",
+                "mount": 100
+            },
+            {
+                "title": "jQuery",
+                "mount": 100
+            },
+            {
+                "title": "React",
+                "mount": 100
+            },
+            {
+                "title": "Vue",
+                "mount": 70
+            },
+            {
+                "title": "Next.js",
+                "mount": 90
+            },
+            {
+                "title": "Angular",
+                "mount": 80
+            },
+            {
+                "title": "React Native",
+                "mount": 90
+            },
+            {
+                "title": "GASP",
+                "mount": 80
+            }
+        ],
+        "Backend": [
+            {
+                "title": "Express",
+                "mount": 100
+            },
+            {
+                "title": "Nest.js",
+                "mount": 90
+            },
+            {
+                "title": "Python",
+                "mount": 80
+            },
+            {
+                "title": "Django",
+                "mount": 70
+            },
+            {
+                "title": "Flask",
+                "mount": 90
+            },
+            {
+                "title": "FastAPI",
+                "mount": 90
+            },
+            {
+                "title": "C#",
+                "mount": 90
+            },
+            {
+                "title": ".NET Core",
+                "mount": 90
+            },
+            {
+                "title": "ASP.NET",
+                "mount": 90
+            }
+        ],
+        "Mobile Development":[
+            {
+                "title": "Xamarin",
+                "mount": 50
+            },
+            {
+                "title": "MAUI",
+                "mount": 70
+            },
+            {
+                "title": "React Native",
+                "mount": 90
+            }
+        ],
+        "Data Science and Machine Learning":[
+            {
+                "title": "Pandas",
+                "mount": 90
+            },
+            {
+                "title": "TensorFlow",
+                "mount": 80
+            },
+            {
+                "title": "PyTorch",
+                "mount": 70
+            },
+            {
+                "title": "SQLAlchemy",
+                "mount": 90
+            }
+        ],
+        "Databases": [
+            {
+                "title": "MySQL",
+                "mount": 100
+            },
+            {
+                "title": "PostgreSQL",
+                "mount": 90
+            },
+            {
+                "title": "MongoDB",
+                "mount": 90
+            },
+            {
+                "title": "Redis",
+                "mount": 40
+            },
+        ],
+        "Cloud Services": [
+            {
+                "title": "Heroku",
+                "mount": 90
+            },
+            {
+                "title": "AWS",
+                "mount": 80
+            },
+            {
+                "title": "GCP",
+                "mount": 90
+            },
+            {
+                "title": "Microsoft Azure",
+                "mount": 80
+            },
+            {
+                "title": "Vercel",
+                "mount": 100
+            },
+        ],
+        "Version Control and Collaboration": [
+            {
+                "title": "GitHub",
+                "mount": 90
+            },
+            {
+                "title": "GitLab",
+                "mount": 60
+            },
+            {
+                "title": "Bitbucket",
+                "mount": 30
+            },
+        ],
+        "Containerization and Orchestration": [
+            {
+                "title": "Docker",
+                "mount": 80
+            },
+            {
+                "title": "Kubernetes",
+                "mount": 70
+            },
         ]
     },
     "history": {
         "education": [
             {
-                "title": "Test",
-                "period": "Test",
-                "position": "Test",
+                "title": "Front End Bootcamp",
+                "period": "2015 - 2017",
+                "position": "Online(W3school)",
+                "desc": "",
+            },
+            {
+                "title": "React Tutorial",
+                "period": "2016 - 2017",
+                "position": "Online(W3school)",
                 "desc": "Test",
             },
             {
-                "title": "Test",
-                "period": "Test",
-                "position": "Test",
+                "title": "Node.js Tutorial",
+                "period": "2016 - 2018",
+                "position": "Online(W3school)",
                 "desc": "Test",
             },
             {
-                "title": "Test",
-                "period": "Test",
-                "position": "Test",
+                "title": "Secondary school No153",
+                "period": "2016 - 2020",
+                "position": "Kharkiv, Ukraine",
+                "desc": "Test",
+            },
+            {
+                "title": "Taras Shevchenko National University of Kyiv",
+                "period": "2020 - 2023",
+                "position": "Kyiv, Ukraine",
                 "desc": "Test",
             }
         ],
         "companies": [
             {
-                "title": "Test",
-                "period": "Test",
-                "position": "Test",
+                "title": "Software Engineering Intern | McKinsey & Company Kyiv",
+                "period": "Aug 2023 - Aug 2023",
+                "position": "Kyiv, Ukraine",
                 "desc": "Test",
             },
             {
-                "title": "Test",
-                "period": "Test",
-                "position": "Test",
+                "title": "Software Engineering Intern | KDD Engineering",
+                "period": "Jun 2023 - Jun 2023",
+                "position": "Kyiv, Ukraine",
                 "desc": "Test",
             },
             {
-                "title": "Test",
-                "period": "Test",
-                "position": "Test",
+                "title": "Software Engineering Intern | ALLSTARSIT Ukraine",
+                "period": "Apr 2023 - Apr 2023",
+                "position": "Kyiv, Ukraine",
                 "desc": "Test",
             }
         ]
