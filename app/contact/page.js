@@ -29,7 +29,7 @@ const Index = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     console.log("NEXT_PUBLIC_EMAILJS_USER_ID", process.env.NEXT_PUBLIC_EMAILJS_USER_ID)
     console.log("NEXT_PUBLIC_EMAILJS_SERVICE_ID", process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID)
     console.log("NEXT_PUBLIC_EMAILJS_TEMPLATE_ID", process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID)
@@ -38,9 +38,7 @@ const Index = () => {
       process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
       process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
       currentForm.current,
-      {
-        publicKey: process.env.NEXT_PUBLIC_EMAILJS_USER_ID,
-      }
+      process.env.NEXT_PUBLIC_EMAILJS_USER_ID,
     ).then((response) => {
       alert('Message sent successfully!');
     }).catch((err) => {
