@@ -1,3 +1,4 @@
+"use client"
 import { Fragment, useRef, useState } from "react";
 import emailjs from 'emailjs-com';
 
@@ -41,16 +42,16 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    const { NEXT_PUBLIC_EMAILJS_USER_ID, NEXT_PUBLIC_EMAILJS_SERVICE_ID, NEXT_PUBLIC_EMAILJS_TEMPLATE_ID } = process.env;
-
-    console.log(currentForm.current)
+    console.log("NEXT_PUBLIC_EMAILJS_USER_ID", process.env.NEXT_PUBLIC_EMAILJS_USER_ID)
+    console.log("NEXT_PUBLIC_EMAILJS_SERVICE_ID", process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID)
+    console.log("NEXT_PUBLIC_EMAILJS_TEMPLATE_ID", process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID)
     
     emailjs.sendForm(
-      NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-      NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
       currentForm.current,
       {
-        publicKey: NEXT_PUBLIC_EMAILJS_USER_ID,
+        publicKey: process.env.NEXT_PUBLIC_EMAILJS_USER_ID,
       }
     ).then((response) => {
       console.log('SUCCESS!', response.status, response.text);
